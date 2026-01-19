@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
           once: true,
         });
       }, 300);
-    }, 5000); // Đảm bảo loader hiển thị ít nhất 1 giây
+    }, 3000); // Đảm bảo loader hiển thị ít nhất 5 giây
   });
   lucide.createIcons();
 });
