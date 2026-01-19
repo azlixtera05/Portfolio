@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nhat Phong - Data Analyst</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css" />
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body class="bg-white text-gray-800">
+    <!-- LOADING SCREEN -->
+    <!-- LOADING SCREEN -->
+    <div
+      id="loading-screen"
+      class="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-white"
+    >
+      <svg
+        class="chart-loader mb-8"
+        width="160"
+        height="80"
+        viewBox="0 0 160 80"
+        fill="none"
+      >
+        <!-- Line -->
+        <polyline
+          points="0,60 30,40 60,50 90,20 120,35 160,10"
+          class="chart-line"
+        />
+        <!-- Dots -->
+        <circle cx="30" cy="40" r="4" class="chart-dot" />
+        <circle cx="60" cy="50" r="4" class="chart-dot" />
+        <circle cx="90" cy="20" r="4" class="chart-dot" />
+        <circle cx="120" cy="35" r="4" class="chart-dot" />
+      </svg>
+
+      <h1
+        class="text-4xl md:text-5xl font-extrabold text-cyan-500 tracking-wider"
+      >
+        WELCOME!
+      </h1>
+    </div>
+
+    <div id="main-content" class="hidden">
+      <!-- Navbar -->
+      <nav
+        class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 shadow-sm"
+      >
+        <div
+          class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex justify-between items-center"
+        >
+          <a href="#" class="text-3xl font-bold text-gradient"
+            >Portfolio - NP</a
+          >
+          <div
+            class="hidden md:flex items-center gap-10 font-medium text-gray-700"
+          >
+            <a href="#about" class="hover:text-cyan-600 transition">About</a>
+            <a href="#skills" class="hover:text-cyan-600 transition">Skills</a>
+            <a href="#projects" class="hover:text-cyan-600 transition"
+              >Projects</a
+            >
+            <a href="#viz" class="hover:text-cyan-600 transition"
+              >Visualizations</a
+            >
+            <a href="#contact" class="hover:text-cyan-600 transition"
+              >Contact</a
+            >
+          </div>
+        </div>
+      </nav>
+      <!-- Hero -->
+      <header class="pt-32 pb-24 px-4 sm:px-6 lg:px-8 bg-white text-center">
+        <div class="max-w-6xl mx-auto" data-aos="fade-up">
+          <h1
+            class="text-5xl sm:text-6xl lg:text-7xl font-extrabold mb-5 tracking-tight text-cyan-600"
+          >
+            <span id="typewriter-name">NHAT PHONG</span>
+            <span class="typewriter-cursor">|</span>
+          </h1>
+          <p
+            class="text-2xl sm:text-3xl lg:text-4xl font-light text-gray-600 mb-8"
+          >
+            Data Analyst
+          </p>
+          <p
+            class="text-lg sm:text-xl max-w-3xl mx-auto mb-12 text-gray-700 leading-relaxed"
+          >
+            Transforming complex data into clear, actionable insights that drive
+            better business decisions.
+          </p>
+          <div class="flex flex-col sm:flex-row justify-center gap-6">
+            <a
+              href="#projects"
+              class="px-10 py-5 bg-cyan-500 text-white font-semibold rounded-xl shadow-lg hover:bg-cyan-600 transition-all text-lg"
+            >
+              View Projects
+            </a>
+            <a
+              href="assets/cv.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="px-10 py-5 border-2 border-cyan-500 text-cyan-500 font-semibold rounded-xl hover:bg-cyan-500 hover:text-white transition-all text-lg"
+            >
+              View CV (PDF)
+            </a>
+          </div>
+        </div>
+      </header>
+      <!-- About -->
+      <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-5xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+          <h2
+            class="text-4xl sm:text-5xl font-bold mb-12 text-center text-gradient"
+          >
+            About Me
+          </h2>
+          <div
+            class="prose sm:prose-lg lg:prose-xl mx-auto text-gray-700 leading-relaxed max-w-4xl"
+          >
+            <p class="text-lg md:text-xl text-center mb-10 font-light">
+              Passionate Data Analyst with 5+ years of experience turning
+              complex datasets into clear, actionable insights.
+            </p>
+            <div class="grid md:grid-cols-2 gap-10 items-center">
+              <div class="space-y-6">
+                <p>I specialize in:</p>
+                <ul class="list-none space-y-4 text-lg">
+                  <li class="flex items-start">
+                    <span class="text-cyan-500 mr-3 text-2xl font-bold">→</span>
+                    Advanced data cleaning & transformation
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-cyan-500 mr-3 text-2xl font-bold">→</span>
+                    Statistical analysis & predictive modeling
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-cyan-500 mr-3 text-2xl font-bold">→</span>
+                    Building high-impact, interactive dashboards
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-cyan-500 mr-3 text-2xl font-bold">→</span>
+                    Turning data into strategic business recommendations
+                  </li>
+                </ul>
+              </div>
+              <div class="text-center md:text-left mt-8 md:mt-0">
+                <div
+                  class="inline-block bg-gradient-to-br from-cyan-500 to-teal-500 text-white px-10 py-8 rounded-2xl shadow-lg transform hover:scale-105 transition-transform"
+                >
+                  <div class="text-5xl md:text-6xl font-black">50+</div>
+                  <div class="text-lg md:text-xl mt-2 opacity-90 font-medium">
+                    Projects Delivered
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Skills -->
+      <section id="skills" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-6xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+          <h2
+            class="text-4xl sm:text-5xl font-bold mb-14 text-center text-gradient"
+          >
+            Core Skills
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Python -->
+            <div
+              class="bg-white p-8 rounded-2xl shadow card-hover border border-gray-100 flex flex-col items-center text-center"
+            >
+              <img
+                src="assets/images/python-logo.jpg"
+                alt="Python Logo"
+                class="h-20 w-auto mb-6 object-contain"
+              />
+              <h3 class="text-2xl font-bold mb-4 text-cyan-600">Python</h3>
+              <p class="text-gray-600">
+                Pandas, NumPy, Matplotlib, Seaborn, Plotly, Scikit-learn
+              </p>
+            </div>
+            <!-- SQL & Databases -->
+            <div
+              class="bg-white p-8 rounded-2xl shadow card-hover border border-gray-100 flex flex-col items-center text-center"
+            >
+              <div class="flex items-center gap-6 mb-6">
+                <img
+                  src="assets/images/sql-logo.jpg"
+                  alt="My SQL"
+                  class="h-16 w-auto object-contain"
+                />
+                <img
+                  src="assets/images/postgresql.jpg"
+                  alt="PostgreSQL"
+                  class="h-16 w-auto object-contain"
+                />
+                <img
+                  src="assets/images/SQL-Server.png"
+                  alt="SQL Server"
+                  class="h-16 w-auto object-contain"
+                />
+              </div>
+              <h3 class="text-2xl font-bold mb-4 text-cyan-600">
+                SQL & Databases
+              </h3>
+              <p class="text-gray-600">
+                PostgreSQL, SQL Server, BigQuery, Complex Query Optimization
+              </p>
+            </div>
+            <!-- BI & Visualization -->
+            <div
+              class="bg-white p-8 rounded-2xl shadow card-hover border border-gray-100 flex flex-col items-center text-center"
+            >
+              <div class="flex items-center gap-8 mb-6">
+                <img
+                  src="assets/images/Microsoft-Power-BI-Symbol.png"
+                  alt="Power BI"
+                  class="h-16 w-auto object-contain"
+                />
+                <img
+                  src="assets/images/Tableau-Logo.png"
+                  alt="Tableau"
+                  class="h-16 w-auto object-contain"
+                />
+              </div>
+              <h3 class="text-2xl font-bold mb-4 text-cyan-600">
+                BI & Visualization
+              </h3>
+              <p class="text-gray-600">
+                Power BI (DAX, Power Query), Tableau, Interactive Dashboards
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Projects -->
+      <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-6xl mx-auto" data-aos="fade-up" data-aos-delay="300">
+          <h2
+            class="text-4xl sm:text-5xl font-bold mb-14 text-center text-gradient"
+          >
+            Featured Projects
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Project 1 -->
+            <div class="bg-gray-50 p-8 rounded-2xl shadow card-hover group">
+              <h3
+                class="text-2xl font-bold mb-4 text-cyan-600 group-hover:text-cyan-700 transition-colors"
+              >
+                Sales Performance Dashboard
+              </h3>
+              <p class="text-gray-600 mb-5">
+                Real-time sales tracking dashboard with trend forecasting and
+                KPI monitoring.
+              </p>
+              <div class="text-sm text-gray-500 mb-3">
+                Tools: Power BI • SQL • Python
+              </div>
+              <div class="text-sm font-semibold text-teal-600 mb-6">
+                Result: +22% sales efficiency
+              </div>
+              <a
+                href="https://your-project-link-1.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center text-cyan-600 font-medium hover:text-cyan-700 transition"
+              >
+                View Project →
+              </a>
+            </div>
+            <!-- Project 2 -->
+            <div class="bg-gray-50 p-8 rounded-2xl shadow card-hover group">
+              <h3
+                class="text-2xl font-bold mb-4 text-cyan-600 group-hover:text-cyan-700 transition-colors"
+              >
+                Customer Churn Prediction
+              </h3>
+              <p class="text-gray-600 mb-5">
+                Machine learning model to predict churn and recommend retention
+                strategies.
+              </p>
+              <div class="text-sm text-gray-500 mb-3">
+                Tools: Python • Scikit-learn • Tableau
+              </div>
+              <div class="text-sm font-semibold text-teal-600 mb-6">
+                Result: -18% churn rate
+              </div>
+              <a
+                href="https://your-project-link-2.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center text-cyan-600 font-medium hover:text-cyan-700 transition"
+              >
+                View Project →
+              </a>
+            </div>
+            <!-- Project 3 -->
+            <div class="bg-gray-50 p-8 rounded-2xl shadow card-hover group">
+              <h3
+                class="text-2xl font-bold mb-4 text-cyan-600 group-hover:text-cyan-700 transition-colors"
+              >
+                Market Demand Forecasting
+              </h3>
+              <p class="text-gray-600 mb-5">
+                Time-series forecasting for inventory and production planning.
+              </p>
+              <div class="text-sm text-gray-500 mb-3">
+                Tools: Prophet • Python • Power BI
+              </div>
+              <div class="text-sm font-semibold text-teal-600 mb-6">
+                Result: +25% forecast accuracy
+              </div>
+              <a
+                href="https://your-project-link-3.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center text-cyan-600 font-medium hover:text-cyan-700 transition"
+              >
+                View Project →
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Visualizations -->
+      <section id="viz" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-6xl mx-auto" data-aos="fade-up" data-aos-delay="400">
+          <h2
+            class="text-4xl sm:text-5xl font-bold mb-14 text-center text-gradient"
+          >
+            Data Visualizations
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-2xl shadow h-80">
+              <canvas id="lineChart"></canvas>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow h-80">
+              <canvas id="barChart"></canvas>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow h-80">
+              <canvas id="doughnutChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Contact -->
+      <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div
+          class="max-w-5xl mx-auto text-center"
+          data-aos="fade-up"
+          data-aos-delay="500"
+        >
+          <h2 class="text-4xl sm:text-5xl font-bold mb-10 text-gradient">
+            Get in Touch
+          </h2>
+          <p
+            class="text-xl text-gray-700 mb-12 max-w-3xl mx-auto leading-relaxed"
+          >
+            I'm open to new opportunities, collaborations, and discussions about
+            data-driven solutions.
+          </p>
+          <div
+            class="flex flex-wrap justify-center gap-10 sm:gap-14 text-lg mb-16"
+          >
+            <!-- Email -->
+            <a
+              href="mailto:buinhatphongcontactworks@gmail.com"
+              class="flex items-center gap-3 text-gray-700 hover:text-cyan-600 transition"
+            >
+              <i data-lucide="mail" class="w-6 h-6"></i>
+              buinhatphongcontactworks@gmail.com
+            </a>
+
+            <!-- LinkedIn -->
+            <a
+              href="https://www.linkedin.com/in/nh%E1%BA%A5t-phong-b%C3%B9i-319876375"
+              target="_blank"
+              class="flex items-center gap-3 text-gray-700 hover:text-cyan-600 transition"
+            >
+              <i data-lucide="linkedin" class="w-6 h-6"></i>
+              @ Nhất Phong Bùi
+            </a>
+
+            <!-- GitHub -->
+            <a
+              href="https://github.com/azlixtera05"
+              target="_blank"
+              class="flex items-center gap-3 text-gray-700 hover:text-cyan-600 transition"
+            >
+              <i data-lucide="github" class="w-6 h-6"></i>
+              @azlixtera05
+            </a>
+          </div>
+
+          <!-- Contact Form -->
+          <form id="contact-form" class="max-w-2xl mx-auto space-y-6">
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              required
+              class="w-full px-6 py-4 border border-gray-200 rounded-xl focus:border-cyan-500 focus:ring-2 focus:ring-cyan-200 outline-none transition"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+              class="w-full px-6 py-4 border border-gray-200 rounded-xl focus:border-cyan-500 focus:ring-2 focus:ring-cyan-200 outline-none transition"
+            />
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              rows="5"
+              required
+              class="w-full px-6 py-4 border border-gray-200 rounded-xl focus:border-cyan-500 focus:ring-2 focus:ring-cyan-200 outline-none transition"
+            ></textarea>
+            <button
+              type="submit"
+              class="w-full px-10 py-5 bg-cyan-500 text-white font-bold rounded-xl shadow-lg hover:bg-cyan-600 transition text-lg"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+      </section>
+      <!-- Footer -->
+      <footer
+        class="py-12 text-center text-gray-500 border-t border-gray-100 bg-white"
+      >
+        © 2026 Nhat Phong • Data Analyst • Hanoi, Vietnam
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/charts.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
