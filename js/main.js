@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const nameElement = document.getElementById("typewriter-name");
   if (!nameElement) return; // bảo vệ nếu không tìm thấy element
 
-  const texts = ["NHAT PHONG"];
+  const texts = ["NHAT PHONG", "DATA ANALYST"];
   let textIndex = 0;
   let isDeleting = false;
   let charIndex = 0;
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!isDeleting && charIndex === currentFull.length) {
       // Gõ xong → pause rồi bắt đầu xóa
       isDeleting = true;
-      speed = 2000; // pause 1.5 giây trước khi xóa
+      speed = 5000; // pause 5 giây trước khi xóa
     } else if (isDeleting && charIndex === 0) {
       // Xóa xong → chuyển sang text tiếp theo
       isDeleting = false;
@@ -81,8 +81,8 @@ document.addEventListener("DOMContentLoaded", () => {
           duration: 800,
           once: true,
         });
-      }, 300);
-    }, 3000); // Đảm bảo loader hiển thị ít nhất 5 giây
+      }, 200);
+    }, 2500); // Đảm bảo loader hiển thị ít nhất 2.5 giây
   });
   lucide.createIcons();
 });
